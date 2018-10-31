@@ -1,0 +1,10 @@
+[Unit]
+Description=Google Home Notifier Service
+
+[Service]
+WorkingDirectory=/home/pi/home_automation/google-home-notifier
+ExecStart=/usr/local/bin/node /home/pi/home_automation/google-home-notifier/server.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
